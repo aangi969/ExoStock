@@ -1,0 +1,21 @@
+{
+  "name": "exostock-product-redesign",
+  "version": "2.0.0",
+  "description": "Minimalist, aesthetic, global-ready redesign of Exotic Infotech ExoStock product website",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx -y serve . -l 3000",
+    "dev": "npx -y serve . -l 3000"
+  },
+  "keywords": [
+    "exostock",
+    "exotic-infotech",
+    "inventory-management",
+    "saas",
+    "minimalist-design",
+    "apple-aesthetic",
+    "vercel-style"
+  ],
+  "author": "Exotic Infotech Redesign Team",
+  "license": "MIT"
+}

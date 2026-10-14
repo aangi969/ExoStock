@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ExoStock 2.0 • Modern Inventory Intelligence & Global Operations</title>
+  <meta name="description"
+    content="ExoStock by Exotic Infotech: The next-generation inventory management, multi-warehouse orchestration, GST billing, and real-time stock tracking platform for global enterprises.">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230284c7'><path d='M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z'/></svg>">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Ambient High-End Tech Grid Overlay -->
+  <div class="grid-bg-overlay" aria-hidden="true"></div>
+
+  <!-- Announcement Bar -->
+  <aside class="announcement-bar" role="complementary">
+    <span class="announcement-badge">New Release</span>
+    <span>Introducing <strong>ExoStock 2.0</strong> — Re-engineered for global scale, multi-currency & sub-second
+      sync.</span>
+    <a href="https://exoticinfotech.com" target="_blank" rel="noopener noreferrer" class="announcement-link">
+      Exotic Infotech Home
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M7 17l9.2-9.2M17 17V8H8" />
+      </svg>
+    </a>
+  </aside>
+
+  <!-- Sticky Glass Navigation Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="brand-wrapper">
+
+        <a href="#hero" class="brand-logo-container">
+          <div class="brand-text">
+            <div class="brand-headline-row">
+              <span class="brand-name">ExoStock</span>
+              <span class="v-tag">v2.0</span>
+            </div>
+            <span class="brand-subline">Inventory Platform</span>
+          </div>
+        </a>
+
+      </div>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="#simulator" class="nav-link">Interactive Tour</a>
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#roi-calculator" class="nav-link">ROI Calculator</a>
+        <a href="#integrations" class="nav-link">Integrations</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Global Currency Switcher -->
+        <div class="currency-selector-wrapper" title="Switch Billing Currency">
+          <select id="currencySelect" class="currency-select" aria-label="Currency Selector">
+            <option value="USD">USD ($)</option>
+            <option value="INR" selected>INR (₹)</option>
+            <option value="EUR">EUR (€)</option>
+            <option value="GBP">GBP (£)</option>
+            <option value="AED">AED (د.إ)</option>
+          </select>
+          <svg class="currency-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </div>
+
+        <!-- Light/Dark Mode Switcher -->
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle Theme Mode"
+          title="Toggle Light/Dark Theme">
+          <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+
+        <button class="btn btn-secondary btn-nav open-demo-modal-btn">Sign In</button>
+        <button class="btn btn-primary btn-nav open-demo-modal-btn">Schedule Demo</button>
+
+        <button id="mobileNavToggle" class="mobile-nav-toggle" aria-label="Open Mobile Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================================================================
+         HERO SECTION (Apple/Vercel Minimalist Grandeur)
+         =================================================================== -->
+    <section id="hero" class="hero-section">
+      <div class="container">
+        <div class="hero-two-column-grid">
+          <!-- Left Column: Copy & Actions -->
+          <div class="hero-left-col">
+            <div class="hero-badge-pill">
+              <span class="pulse-dot"></span>
+              <span>EXOSTOCK 2.0</span>
+              <span style="opacity: 0.5;">•</span>
+              <span>By Exotic Infotech</span>
+              <span style="opacity: 0.5;">•</span>
+              <span style="color: var(--accent-primary);">GST & Global Ready</span>
+            </div>
+
+            <h1 class="hero-title">
+              ExoStock – Inventory Management <span class="hero-blue-gradient">Built for Modern & Global Business</span>
+            </h1>
+
+            <p class="hero-description">
+              Stop managing inventory in Excel. ExoStock unifies sub-second stock telemetry, automated GST &
+              international VAT billing, multi-warehouse logistics, and smart reorder forecasting into one intuitive,
+              lightning-fast dashboard.
+            </p>
+
+            <div class="hero-buttons-row">
+              <button class="btn btn-primary btn-lg open-demo-modal-btn">
+                <span>🎯 Get Free Demo</span>
+              </button>
+              <a href="#pricing" class="btn btn-secondary btn-lg">
+                <span>💰 See Plans & Pricing</span>
+              </a>
+            </div>
+
+            <div class="hero-trust-pills">
+              <div class="hero-trust-card">
+                <div class="hero-trust-num">100% <span style="font-size: 14px; color: var(--accent-emerald);">✓</span>
+                </div>
+                <div class="hero-trust-label">Secured Cloud (SOC2 / AES-256)</div>
+              </div>
+              <div class="hero-trust-card">
+                <div class="hero-trust-num">GST & VAT</div>
+                <div class="hero-trust-label">Multi-Country Tax & E-Way Ready</div>
+              </div>
+              <div class="hero-trust-card">
+                <div class="hero-trust-num">24/7/365</div>
+                <div class="hero-trust-label">Dedicated Technical Support</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Video Showcase Card -->
+          <div class="hero-right-col">
+            <div class="hero-video-card">
+              <div class="hero-video-top">
+                <div class="hero-video-dots">
+                  <span class="browser-dot red"></span>
+                  <span class="browser-dot yellow"></span>
+                  <span class="browser-dot green"></span>
+                </div>
+                <div class="hero-video-status">
+                  <span class="pulse-dot"></span>
+                  <span>ExoStock Live Demo • Sub-Second Sync</span>
+                </div>
+                <span style="font-size: 11px; font-weight: 600; color: var(--accent-emerald);">● 99.99% Uptime</span>
+              </div>
+
+              <video id="exostockVideo" class="hero-video-video" controls playsinline preload="metadata" autoplay muted
+                loop>
+                <source src="https://exoticinfotech.com/assets/product1-Dfsxbn5U.mp4" type="video/mp4">
+                Your browser does not support HTML5 video streaming.
+              </video>
+
+              <div class="hero-video-chapters">
+                <button class="hero-chapter-btn chapter-pill active" data-time="0">0:00 Invoicing</button>
+                <button class="hero-chapter-btn chapter-pill" data-time="20">0:20 Barcode Scan</button>
+                <button class="hero-chapter-btn chapter-pill" data-time="45">0:45 Multi-Store</button>
+                <button class="hero-chapter-btn chapter-pill" data-time="70">1:10 Reports</button>
+              </div>
+            </div>
+
+            <!-- Floating Micro-Widgets -->
+            <div class="hero-floating-pill">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+              </svg>
+              <span>14,250 SKUs Synced Live</span>
+            </div>
+            <div class="hero-floating-card">
+              <div style="font-weight: 700; color: #0d5b96; margin-bottom: 2px;">GST Invoice #INV-894 Generated</div>
+              <div style="color: #64748b; font-size: 10.5px;">₹45,784.00 • Instant WhatsApp Dispatch ✓</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         FLAGSHIP MODULE: INTERACTIVE ERP WORKSPACE SIMULATOR
+         =================================================================== -->
+    <section id="simulator" class="simulator-section">
+      <div class="container">
+        <div class="section-header-centered" style="margin-bottom: 36px;">
+          <span class="section-tag">Interactive ERP Workspace</span>
+          <h2 class="section-title">Test-drive ExoStock's live telemetry engine.</h2>
+          <p class="section-description">
+            Experience sub-second stock adjustments, automated GST invoicing, multi-warehouse stock routing, and
+            machine-learning demand forecasts live in your browser.
+          </p>
+        </div>
+
+        <div class="simulator-wrapper">
+          <div class="simulator-glow-backdrop" aria-hidden="true"></div>
+
+          <div class="browser-mockup">
+            <!-- Title Bar -->
+            <div class="browser-chrome">
+              <div class="browser-dots">
+                <span class="browser-dot red"></span>
+                <span class="browser-dot yellow"></span>
+                <span class="browser-dot green"></span>
+              </div>
+              <div class="browser-url-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+                <span>app.exostock.io/workspace/global-telemetry</span>
+              </div>
+              <div class="browser-status-indicator">
+                <span class="pulse-dot"></span>
+                <span>Live Feed Active</span>
+              </div>
+            </div>
+
+            <!-- Tab Bar -->
+            <div class="simulator-tab-bar" role="tablist">
+              <button class="sim-tab-btn active" data-target="tab-telemetry" role="tab" aria-selected="true">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                </svg>
+                <span>Stock Telemetry & Alerts</span>
+              </button>
+              <button class="sim-tab-btn" data-target="tab-invoicing" role="tab" aria-selected="false">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                  <polyline points="14 2 14 8 20 8" />
+                  <line x1="16" y1="13" x2="8" y2="13" />
+                  <line x1="16" y1="17" x2="8" y2="17" />
+                </svg>
+                <span>Automated GST Invoicing</span>
+              </button>
+              <button class="sim-tab-btn" data-target="tab-warehouses" role="tab" aria-selected="false">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="7" height="7" />
+                  <rect x="14" y="3" width="7" height="7" />
+                  <rect x="14" y="14" width="7" height="7" />
+                  <rect x="3" y="14" width="7" height="7" />
+                </svg>
+                <span>Multi-Warehouse Hubs</span>
+              </button>
+              <button class="sim-tab-btn" data-target="tab-ai-forecast" role="tab" aria-selected="false">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 20V10M12 20V4M6 20v-6" />
+                </svg>
+                <span>AI Predictive Forecast</span>
+              </button>
+            </div>
+
+            <!-- Panel 1: Stock Telemetry -->
+            <div id="tab-telemetry" class="simulator-panel active" role="tabpanel">
+              <div class="sim-controls-row">
+                <div class="sim-search-box">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                  </svg>
+                  <input type="text" id="simSearchInput" placeholder="Filter SKU, item or tag in real time...">
+                </div>
+                <div class="sim-badge-filter">
+                  <button class="sim-filter-btn active">All Items</button>
+                  <button class="sim-filter-btn">Low Stock</button>
+                  <button class="sim-filter-btn">High Velocity</button>
+                </div>
+              </div>
+
+              <div class="sim-table-container">
+                <table class="sim-table">
+                  <thead>
+                    <tr>
+                      <th>Product & SKU Code</th>
+                      <th>Quantity on Hand</th>
+                      <th>Telemetry Status</th>
+                      <th>Reorder Floor</th>
+                      <th style="text-align: right;">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="simInventoryTableBody">
+                    <!-- Populated dynamically by app.js -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Panel 2: Invoicing -->
+            <div id="tab-invoicing" class="simulator-panel" role="tabpanel">
+              <div class="billing-split-grid">
+                <div class="invoice-preview-card">
+                  <div class="invoice-header-meta">
+                    <div>
+                      <div class="invoice-title">Tax Invoice (GST Compliant)</div>
+                      <div style="font-size: 11px; color: var(--text-muted);">B2B Registered Enterprise • E-Way Bill
+                        Generated</div>
+                    </div>
+                    <div class="invoice-number">#INV-2026-894</div>
+                  </div>
+
+                  <table class="invoice-calc-table">
+                    <tr>
+                      <td>Industrial RFID Handheld Terminal (x2)</td>
+                      <td class="price-col">₹ 24,000.00</td>
+                    </tr>
+                    <tr>
+                      <td>Barcode Scan Stand 2D Imager (x4)</td>
+                      <td class="price-col">₹ 14,800.00</td>
+                    </tr>
+                    <tr>
+                      <td>Subtotal</td>
+                      <td class="price-col">₹ 38,800.00</td>
+                    </tr>
+                    <tr>
+                      <td>CGST (9%) + SGST (9%)</td>
+                      <td class="price-col">₹ 6,984.00</td>
+                    </tr>
+                    <tr class="invoice-total-row">
+                      <td style="padding-top: 10px;">Total Due (INR)</td>
+                      <td class="price-col" style="padding-top: 10px; color: var(--accent-brand);">₹ 45,784.00</td>
+                    </tr>
+                  </table>
+
+                  <div style="display: flex; gap: 10px; margin-top: 16px;">
+                    <button id="simGenerateInvoiceBtn" class="btn btn-secondary btn-sm"
+                      style="flex: 1; font-size: 12px;">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+                      </svg>
+                      Download PDF
+                    </button>
+                    <button id="simWhatsAppBtn" class="btn btn-primary btn-sm"
+                      style="flex: 1; font-size: 12px; background: #25d366; border-color: #25d366;">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path
+                          d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                      </svg>
+                      Send WhatsApp
+                    </button>
+                  </div>
+                </div>
+
+                <div style="display: flex; flex-direction: column; justify-content: space-between;">
+                  <div>
+                    <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px;">Zero-Error Multi-Currency Billing
+                    </h3>
+                    <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 16px;">
+                      Whether dealing with domestic GST, state-level IGST, European VAT, or GCC cross-border trade,
+                      ExoStock computes rates accurately, generates QR-encoded invoices, and notifies clients via
+                      automated WhatsApp & email dispatches.
+                    </p>
+                    <div
+                      style="display: flex; flex-direction: column; gap: 8px; font-size: 12px; color: var(--text-secondary);">
+                      <div style="display: flex; align-items: center; gap: 8px;">
+                        <span style="color: var(--accent-emerald); font-weight: 800;">✓</span>
+                        <span>Official GST Portal & E-Way Bill API Synchronization</span>
+                      </div>
+                      <div style="display: flex; align-items: center; gap: 8px;">
+                        <span style="color: var(--accent-emerald); font-weight: 800;">✓</span>
+                        <span>Customizable B2B Quotations, Purchase Orders & Challans</span>
+                      </div>
+                      <div style="display: flex; align-items: center; gap: 8px;">
+                        <span style="color: var(--accent-emerald); font-weight: 800;">✓</span>
+                        <span>One-click Export to Tally Prime, Excel & QuickBooks</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    style="background: var(--bg-surface); padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); font-size: 12px; color: var(--text-muted);">
+                    💡 <em>Real-time tax engine audited for compliance across 18 countries.</em>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 3: Multi-Warehouse -->
+            <div id="tab-warehouses" class="simulator-panel" role="tabpanel">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px;">
+                <div>
+                  <h3 style="font-size: 17px; font-weight: 700;">Global Logistics & Node Allocation</h3>
+                  <p style="font-size: 12px; color: var(--text-muted);">Synchronized live across all distributed
+                    regional fulfillment nodes</p>
+                </div>
+                <button id="simTransferStockBtn" class="btn btn-secondary btn-sm" style="font-size: 12px;">
+                  🔄 Simulate Rebalancing Transfer
+                </button>
+              </div>
+
+              <div class="warehouses-grid">
+                <div class="warehouse-card">
+                  <div class="wh-title-row">
+                    <span class="wh-name">Mumbai Central Hub (HQ)</span>
+                    <span class="stock-tag optimal">Online</span>
+                  </div>
+                  <div style="font-size: 12px; color: var(--text-muted);">Cap: 12,400 / 15,000 units</div>
+                  <div class="wh-capacity-bar">
+                    <div class="wh-capacity-fill" style="width: 82%;"></div>
+                  </div>
+                  <div style="font-size: 11px; color: var(--text-secondary);">Dispatch Speed: <strong>sub-45min</strong>
+                  </div>
+                </div>
+
+                <div class="warehouse-card">
+                  <div class="wh-title-row">
+                    <span class="wh-name">London Heathrow Gateway</span>
+                    <span class="stock-tag optimal">Online</span>
+                  </div>
+                  <div style="font-size: 12px; color: var(--text-muted);">Cap: 4,850 / 8,000 units</div>
+                  <div class="wh-capacity-bar">
+                    <div class="wh-capacity-fill" style="width: 60%;"></div>
+                  </div>
+                  <div style="font-size: 11px; color: var(--text-secondary);">Dispatch Speed: <strong>same-day</strong>
+                  </div>
+                </div>
+
+                <div class="warehouse-card">
+                  <div class="wh-title-row">
+                    <span class="wh-name">Singapore Changi Depot</span>
+                    <span class="stock-tag low">Replenishing</span>
+                  </div>
+                  <div style="font-size: 12px; color: var(--text-muted);">Cap: 6,100 / 7,000 units</div>
+                  <div class="wh-capacity-bar">
+                    <div class="wh-capacity-fill" style="width: 87%; background: #f59e0b;"></div>
+                  </div>
+                  <div style="font-size: 11px; color: var(--text-secondary);">Dispatch Speed: <strong>standard</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 4: AI Forecast -->
+            <div id="tab-ai-forecast" class="simulator-panel" role="tabpanel">
+              <div class="ai-forecast-container">
+                <div class="forecast-chart-mock">
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div style="font-size: 13px; font-weight: 700;">Demand & Burn Rate Model (Next 6 Months)</div>
+                    <span class="stock-tag optimal">98.4% Confidence Model</span>
+                  </div>
+
+                  <div class="forecast-bars">
+                    <div class="forecast-col">
+                      <div class="bar-fill" style="height: 55%;"></div>
+                      <span class="bar-label">May</span>
+                    </div>
+                    <div class="forecast-col">
+                      <div class="bar-fill" style="height: 68%;"></div>
+                      <span class="bar-label">Jun</span>
+                    </div>
+                    <div class="forecast-col">
+                      <div class="bar-fill" style="height: 82%;"></div>
+                      <span class="bar-label">Jul</span>
+                    </div>
+                    <div class="forecast-col">
+                      <div class="bar-fill" style="height: 60%;"></div>
+                      <span class="bar-label">Aug</span>
+                    </div>
+                    <div class="forecast-col">
+                      <div class="bar-fill projected" style="height: 94%;"></div>
+                      <span class="bar-label">Sep (Est)</span>
+                    </div>
+                    <div class="forecast-col">
+                      <div class="bar-fill projected" style="height: 100%;"></div>
+                      <span class="bar-label">Oct (Peak)</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  style="display: flex; flex-direction: column; justify-content: space-between; background: var(--bg-surface); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                  <div>
+                    <div
+                      style="font-size: 11px; font-weight: 700; color: var(--accent-brand); text-transform: uppercase;">
+                      Smart Recommendation</div>
+                    <h4 style="font-size: 15px; font-weight: 700; margin: 8px 0;">Upcoming Diwali & Q4 Stock Peak</h4>
+                    <p style="font-size: 12px; color: var(--text-secondary); line-height: 1.5;">
+                      AI predicts a 38% velocity increase for RFID readers and packing consumables. Suggested PO
+                      trigger: <strong>September 12th</strong> to avoid supplier delays.
+                    </p>
+                  </div>
+                  <button class="btn btn-primary btn-sm open-demo-modal-btn" style="font-size: 12px; width: 100%;">
+                    Auto-Generate PO Draft
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ===================================================================
+         BENTO GRID ARCHITECTURE (Vercel Style Clean Grid)
+         =================================================================== -->
+    <section id="features" class="bento-section">
+      <div class="container">
+        <div class="section-header-centered">
+          <span class="section-tag">Engineered For Reliability</span>
+          <h2 class="section-title">Everything your enterprise operations require.</h2>
+          <p class="section-description">
+            Every feature in ExoStock is crafted with speed, accuracy, and operational ergonomics at the core.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Card 1: Real-Time Stock Tracking (Span 2) -->
+          <div class="bento-card span-2">
+            <div>
+              <div class="bento-icon-wrapper">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                  <line x1="12" y1="22.08" x2="12" y2="12" />
+                </svg>
+              </div>
+              <h3 class="bento-title">Sub-Second Real-Time Stock Telemetry</h3>
+              <p class="bento-desc">
+                Every sale across your POS, eCommerce storefronts, return shipment, and warehouse receipt syncs with
+                millisecond latency. Track batch numbers, serial IDs, and expiry dates across global locations
+                simultaneously.
+              </p>
+            </div>
+            <div class="bento-tags">
+              <span class="bento-tag">Live Updates</span>
+              <span class="bento-tag">Multi-Location</span>
+              <span class="bento-tag">Barcode & RFID 2D Support</span>
+              <span class="bento-tag">Serial Tracking</span>
+            </div>
+          </div>
+
+          <!-- Card 2: GST & Global Billing -->
+          <div class="bento-card">
+            <div>
+              <div class="bento-icon-wrapper">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                  <polyline points="14 2 14 8 20 8" />
+                  <line x1="16" y1="13" x2="8" y2="13" />
+                  <line x1="16" y1="17" x2="8" y2="17" />
+                </svg>
+              </div>
+              <h3 class="bento-title">Compliant GST & VAT Billing</h3>
+              <p class="bento-desc">
+                Create compliant tax invoices, quotations, and delivery challans in seconds with automated HSN/SAC code
+                mapping and instant E-Way generation.
+              </p>
+            </div>
+            <div class="bento-tags">
+              <span class="bento-tag">GST Compliant</span>
+              <span class="bento-tag">PDF & Thermal Print</span>
+              <span class="bento-tag">WhatsApp Share</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Smart Low Stock Alerts -->
+          <div class="bento-card">
+            <div>
+              <div class="bento-icon-wrapper">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                  <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                </svg>
+              </div>
+              <h3 class="bento-title">Predictive Reorder Thresholds</h3>
+              <p class="bento-desc">
+                Get proactive alerts on WhatsApp and email before hot items sell out. Protect your cash flow with
+                dynamic safety stock thresholds.
+              </p>
+            </div>
+            <div class="bento-tags">
+              <span class="bento-tag">Automated Triggers</span>
+              <span class="bento-tag">WhatsApp Notifications</span>
+              <span class="bento-tag">Email Alerts</span>
+            </div>
+          </div>
+
+          <!-- Card 4: Executive Reports (Span 2) -->
+          <div class="bento-card span-2">
+            <div>
+              <div class="bento-icon-wrapper">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="20" x2="18" y2="10" />
+                  <line x1="12" y1="20" x2="12" y2="4" />
+                  <line x1="6" y1="20" x2="6" y2="14" />
+                </svg>
+              </div>
+              <h3 class="bento-title">Sales, Purchase & Gross Margin Telemetry</h3>
+              <p class="bento-desc">
+                Uncover gross margins by SKU, track fast vs slow-moving goods, and pinpoint shrinkage immediately with
+                rich interactive visual charts and 1-click Excel/CSV export.
+              </p>
+            </div>
+            <div class="bento-tags">
+              <span class="bento-tag">Gross Margin Analysis</span>
+              <span class="bento-tag">Dead-Stock Detector</span>
+              <span class="bento-tag">Automated Daily Digest</span>
+            </div>
+          </div>
+
+          <!-- Card 5: Multi-User Access -->
+          <div class="bento-card">
+            <div>
+              <div class="bento-icon-wrapper">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              </div>
+              <h3 class="bento-title">Granular RBAC Security</h3>
+              <p class="bento-desc">
+                Role-based access controls for Owners, Accountants, Cashiers, and Warehouse Teams with immutable
+                tamper-proof audit trails.
+              </p>
+            </div>
+            <div class="bento-tags">
+              <span class="bento-tag">Role Permissions</span>
+              <span class="bento-tag">Audit Trail Logs</span>
+              <span class="bento-tag">2FA Protection</span>
+            </div>
+          </div>
+
+          <!-- Card 6: Supplier CRM -->
+          <div class="bento-card">
+            <div>
+              <div class="bento-icon-wrapper">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                  <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
+              </div>
+              <h3 class="bento-title">Vendor & Ledger Management</h3>
+              <p class="bento-desc">
+                Consolidate outstanding payables, receivables, credit limits, and purchase return claims in one single
+                source of truth.
+              </p>
+            </div>
+            <div class="bento-tags">
+              <span class="bento-tag">Ledger Balances</span>
+              <span class="bento-tag">Credit Limits</span>
+              <span class="bento-tag">Payment Reminders</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         INTERACTIVE ROI & TIME-SAVINGS CALCULATOR (New Module)
+         =================================================================== -->
+    <section id="roi-calculator" class="roi-section">
+      <div class="container">
+        <div class="section-header-centered">
+          <span class="section-tag">Quantifiable Business Impact</span>
+          <h2 class="section-title">Calculate your monthly operational savings.</h2>
+          <p class="section-description">
+            See how automating inventory auditing, reconciliation, and GST billing pays for ExoStock in under 14 days.
+          </p>
+        </div>
+
+        <div class="roi-card-container">
+          <!-- Left: Sliders -->
+          <div class="roi-inputs-column">
+            <div class="slider-group">
+              <div class="slider-label-row">
+                <span class="slider-title">Orders Processed Monthly</span>
+                <span id="roiOrdersVal" class="slider-value-display">5,000 orders/mo</span>
+              </div>
+              <input type="range" id="roiOrdersSlider" class="custom-range-slider" min="500" max="40000" step="500"
+                value="5000">
+              <span style="font-size: 11px; color: var(--text-muted);">From boutique shops up to high-volume omnichannel
+                hubs.</span>
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-label-row">
+                <span class="slider-title">Warehouses & Franchise Outlets</span>
+                <span id="roiWarehousesVal" class="slider-value-display">3 Locations</span>
+              </div>
+              <input type="range" id="roiWarehousesSlider" class="custom-range-slider" min="1" max="20" step="1"
+                value="3">
+              <span style="font-size: 11px; color: var(--text-muted);">Includes central depots, retail branches, and
+                fulfillment centres.</span>
+            </div>
+
+            <div
+              style="background: var(--bg-surface); padding: 16px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); font-size: 12px; color: var(--text-secondary);">
+              ⚡ <strong>Data-Backed Metric:</strong> Operations teams using ExoStock report a 74% reduction in manual
+              data entry and an 89% decrease in order dispatch delays.
+            </div>
+          </div>
+
+          <!-- Right: Calculated Results -->
+          <div class="roi-results-column">
+            <div class="roi-metric-item">
+              <span class="roi-metric-number highlight" id="roiHoursSaved">124 hrs</span>
+              <span class="roi-metric-desc">Hours saved every month on manual stock audits and billing</span>
+            </div>
+
+            <div class="roi-metric-item">
+              <span class="roi-metric-number" id="roiStockoutProtected">₹ 16,10,200</span>
+              <span class="roi-metric-desc">Estimated annual revenue protected from stockouts & overselling</span>
+            </div>
+
+            <div class="roi-metric-item">
+              <span class="roi-metric-number" id="roiAnnualSavings" style="color: var(--accent-emerald);">₹
+                3,48,000</span>
+              <span class="roi-metric-desc">Net annual operational cost savings realized</span>
+            </div>
+
+            <button class="btn btn-primary open-demo-modal-btn" style="width: 100%; margin-top: 8px;">
+              Request Custom Enterprise Audit
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         INTEGRATIONS ECOSYSTEM (Global Clients Ready)
+         =================================================================== -->
+    <section id="integrations" class="integrations-section">
+      <div class="container">
+        <div class="section-header-centered">
+          <span class="section-tag">Unmatched Connectivity</span>
+          <h2 class="section-title">Connects seamlessly with your existing stack.</h2>
+          <p class="section-description">
+            Plug ExoStock into your eCommerce storefronts, accounting software, delivery logistics, and messaging
+            channels.
+          </p>
+        </div>
+
+        <div class="integrations-filter-bar">
+          <button class="integ-filter-btn active" data-filter="all">All Integrations</button>
+          <button class="integ-filter-btn" data-filter="ecommerce">E-Commerce</button>
+          <button class="integ-filter-btn" data-filter="accounting">Accounting & ERP</button>
+          <button class="integ-filter-btn" data-filter="logistics">Shipping & Logistics</button>
+          <button class="integ-filter-btn" data-filter="messaging">POS & Comms</button>
+        </div>
+
+        <div class="integrations-grid">
+          <div class="integration-card" data-category="ecommerce">
+            <div class="integ-icon-box">🛍️</div>
+            <div class="integ-info">
+              <span class="integ-name">Shopify</span>
+              <span class="integ-type">Auto-Sync Catalog & Orders</span>
+            </div>
+          </div>
+
+          <div class="integration-card" data-category="ecommerce">
+            <div class="integ-icon-box">📦</div>
+            <div class="integ-info">
+              <span class="integ-name">Amazon Seller</span>
+              <span class="integ-type">FBA & Merchant Fulfillment</span>
+            </div>
+          </div>
+
+          <div class="integration-card" data-category="ecommerce">
+            <div class="integ-icon-box">🛒</div>
+            <div class="integ-info">
+              <span class="integ-name">WooCommerce</span>
+              <span class="integ-type">WordPress Bi-Directional Feed</span>
+            </div>
+          </div>
+
+          <div class="integration-card" data-category="accounting">
+            <div class="integ-icon-box">📊</div>
+            <div class="integ-info">
+              <span class="integ-name">Tally Prime</span>
+              <span class="integ-type">Direct XML & JSON Bridge</span>
+            </div>
+          </div>
+
+          <div class="integration-card" data-category="accounting">
+            <div class="integ-icon-box">📑</div>
+            <div class="integ-info">
+              <span class="integ-name">QuickBooks</span>
+              <span class="integ-type">Global Cloud General Ledger</span>
+            </div>
+          </div>
+
+          <div class="integration-card" data-category="accounting">
+            <div class="integ-icon-box">💼</div>
+            <div class="integ-info">
+              <span class="integ-name">Zoho Books</span>
+              <span class="integ-type">Automated Expense Sync</span>
+            </div>
+          </div>
+
+          <div class="integration-card" data-category="logistics">
+            <div class="integ-icon-box">🚚</div>
+            <div class="integ-info">
+              <span class="integ-name">Shiprocket</span>
+              <span class="integ-type">AWB Generation & Tracking</span>
+            </div>
+          </div>
+
+          <div class="integration-card" data-category="messaging">
+            <div class="integ-icon-box">💬</div>
+            <div class="integ-info">
+              <span class="integ-name">WhatsApp Business</span>
+              <span class="integ-type">Instant PDF Dispatch & Alerts</span>
+            </div>
+          </div>
+
+          <div class="integration-card" data-category="messaging">
+            <div class="integ-icon-box">💳</div>
+            <div class="integ-info">
+              <span class="integ-name">Stripe & Razorpay</span>
+              <span class="integ-type">Payment Links & Webhooks</span>
+            </div>
+          </div>
+
+          <div class="integration-card" data-category="accounting">
+            <div class="integ-icon-box">⚡</div>
+            <div class="integ-info">
+              <span class="integ-name">Zapier / Webhooks</span>
+              <span class="integ-type">5,000+ Custom App Automations</span>
+            </div>
+          </div>
+
+          <div class="integration-card" data-category="logistics">
+            <div class="integ-icon-box">🌐</div>
+            <div class="integ-info">
+              <span class="integ-name">DHL & FedEx</span>
+              <span class="integ-type">Cross-Border Customs API</span>
+            </div>
+          </div>
+
+          <div class="integration-card" data-category="messaging">
+            <div class="integ-icon-box">💻</div>
+            <div class="integ-info">
+              <span class="integ-name">RESTful Developer API</span>
+              <span class="integ-type">Full OpenAPI 3.0 Documentation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         GLOBAL PRICING PLANS MATRIX (6 Redesigned Plans + Toggles)
+         =================================================================== -->
+    <section id="pricing" class="pricing-section">
+      <div class="container">
+        <div class="section-header-centered">
+          <span class="section-tag">Transparent Global Pricing</span>
+          <h2 class="section-title">Predictable plans for growing businesses.</h2>
+          <p class="section-description">
+            Choose the tier matching your SKU velocity. No hidden surprise fees. Change or cancel anytime.
+          </p>
+        </div>
+
+        <div class="pricing-controls">
+          <div class="billing-switch-container">
+            <button id="billingMonthlyBtn" class="billing-toggle-btn">Monthly Billing</button>
+            <button id="billingAnnualBtn" class="billing-toggle-btn active">
+              <span>Annual Billing</span>
+              <span class="save-badge">Save 20%</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- 1. Trial -->
+          <div class="pricing-card" data-plan="Trial">
+            <span class="plan-tier-badge">Starter Evaluation</span>
+            <h3 class="plan-name">Free Trial</h3>
+            <p class="plan-desc">Perfect for testing ExoStock workflows with real products and live test invoices.</p>
+            <div class="plan-price-block">
+              <span class="plan-currency">₹</span>
+              <span class="plan-amount">0</span>
+              <span class="plan-period">/ 14 days</span>
+            </div>
+            <div class="plan-caps-row">
+              <div class="plan-cap-item"><strong>50</strong><span>SKUs</span></div>
+              <div class="plan-cap-item"><strong>1</strong><span>User</span></div>
+              <div class="plan-cap-item"><strong>1</strong><span>Store</span></div>
+            </div>
+            <ul class="plan-features-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Real-Time Stock Tracking</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> GST / VAT Invoicing</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Sales & Purchase Module</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Customer Management</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Standard Email Support</li>
+            </ul>
+            <button class="btn btn-secondary pricing-btn open-demo-modal-btn">Start Free Trial</button>
+          </div>
+
+          <!-- 2. Basic -->
+          <div class="pricing-card" data-plan="Basic">
+            <span class="plan-tier-badge">Small Business</span>
+            <h3 class="plan-name">Basic</h3>
+            <p class="plan-desc">For independent merchants and single-location boutique retailers wanting digital
+              control.</p>
+            <div class="plan-price-block">
+              <span class="plan-currency">₹</span>
+              <span class="plan-amount">1,199</span>
+              <span class="plan-period">/month</span>
+            </div>
+            <div class="plan-caps-row">
+              <div class="plan-cap-item"><strong>200</strong><span>SKUs</span></div>
+              <div class="plan-cap-item"><strong>1</strong><span>User</span></div>
+              <div class="plan-cap-item"><strong>1</strong><span>Store</span></div>
+            </div>
+            <ul class="plan-features-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Everything in Free Trial</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Barcode & Scanner Support</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Automated Low Stock Alerts</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Full GST Filing Reports</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> WhatsApp Invoicing Delivery</li>
+            </ul>
+            <button class="btn btn-secondary pricing-btn open-demo-modal-btn">Choose Basic</button>
+          </div>
+
+          <!-- 3. Standard (Featured) -->
+          <div class="pricing-card featured-plan" data-plan="Standard">
+            <div class="featured-top-badge">★ Most Popular Choice</div>
+            <span class="plan-tier-badge"
+              style="background: var(--accent-brand-subtle); color: var(--accent-brand);">Growing Brands</span>
+            <h3 class="plan-name">Standard</h3>
+            <p class="plan-desc">The flagship choice for multi-staff retailers, wholesalers, and fast-scaling regional
+              distributors.</p>
+            <div class="plan-price-block">
+              <span class="plan-currency">₹</span>
+              <span class="plan-amount">3,119</span>
+              <span class="plan-period">/month</span>
+            </div>
+            <div class="plan-caps-row">
+              <div class="plan-cap-item"><strong>500</strong><span>SKUs</span></div>
+              <div class="plan-cap-item"><strong>3</strong><span>Users</span></div>
+              <div class="plan-cap-item"><strong>1</strong><span>Branch</span></div>
+            </div>
+            <ul class="plan-features-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Everything in Basic</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Automated Purchase Order Cycles</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Operational Expense Tracking</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Advanced Margin & Sales Analytics</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Granular Multi-User Role Permissions</li>
+            </ul>
+            <button class="btn btn-primary pricing-btn open-demo-modal-btn">Choose Standard</button>
+          </div>
+
+          <!-- 4. Business -->
+          <div class="pricing-card" data-plan="Business">
+            <span class="plan-tier-badge">Multi-Location</span>
+            <h3 class="plan-name">Business</h3>
+            <p class="plan-desc">Engineered for multi-branch retail networks and expanding distribution hubs.</p>
+            <div class="plan-price-block">
+              <span class="plan-currency">₹</span>
+              <span class="plan-amount">6,319</span>
+              <span class="plan-period">/month</span>
+            </div>
+            <div class="plan-caps-row">
+              <div class="plan-cap-item"><strong>1,000</strong><span>SKUs</span></div>
+              <div class="plan-cap-item"><strong>5</strong><span>Users</span></div>
+              <div class="plan-cap-item"><strong>5</strong><span>Branches</span></div>
+            </div>
+            <ul class="plan-features-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Everything in Standard</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Multi-Warehouse Stock Transfers</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Real-Time Executive BI Dashboard</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> AI Demand & Inventory Forecast</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> 24/7 Priority Support SLA</li>
+            </ul>
+            <button class="btn btn-secondary pricing-btn open-demo-modal-btn">Choose Business</button>
+          </div>
+
+          <!-- 5. Enterprise -->
+          <div class="pricing-card" data-plan="Enterprise">
+            <span class="plan-tier-badge">Global High-Velocity</span>
+            <h3 class="plan-name">Enterprise</h3>
+            <p class="plan-desc">For large-scale retail chains, manufacturers, and international brand franchises.</p>
+            <div class="plan-price-block">
+              <span class="plan-currency">₹</span>
+              <span class="plan-amount">15,999</span>
+              <span class="plan-period">/month</span>
+            </div>
+            <div class="plan-caps-row">
+              <div class="plan-cap-item"><strong>Unlimited</strong><span>SKUs</span></div>
+              <div class="plan-cap-item"><strong>10+</strong><span>Staff</span></div>
+              <div class="plan-cap-item"><strong>10</strong><span>Branches</span></div>
+            </div>
+            <ul class="plan-features-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Unlimited Products & Transactions</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Full Developer REST API & Webhooks</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Custom BI & Tax Export Formats</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Dedicated Senior Account Manager</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Custom ERP Migration Assistance</li>
+            </ul>
+            <button class="btn btn-secondary pricing-btn open-demo-modal-btn">Contact Enterprise Sales</button>
+          </div>
+
+          <!-- 6. Custom -->
+          <div class="pricing-card" data-plan="Custom">
+            <span class="plan-tier-badge">Tailored Infrastructure</span>
+            <h3 class="plan-name">Custom</h3>
+            <p class="plan-desc">Bespoke white-label deployments, custom ERP modules, and dedicated isolated cloud
+              clusters.</p>
+            <div class="plan-price-block">
+              <span class="plan-amount">Custom</span>
+              <span class="plan-period">quote tailored to your SLA</span>
+            </div>
+            <div class="plan-caps-row">
+              <div class="plan-cap-item"><strong>Unlimited</strong><span>SKUs</span></div>
+              <div class="plan-cap-item"><strong>Unlimited</strong><span>Users</span></div>
+              <div class="plan-cap-item"><strong>Unlimited</strong><span>Branches</span></div>
+            </div>
+            <ul class="plan-features-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> White-Label Branded Client Portal</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Custom In-House ERP Integrations</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Dedicated Engineering Pod & Onboarding</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Private Cloud or On-Premise Deployments</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg> Tailored 99.995% Uptime SLA Guarantee</li>
+            </ul>
+            <button class="btn btn-primary pricing-btn open-demo-modal-btn">Schedule Architecture Call</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         CUSTOMER TESTIMONIALS & TRUSTED BY METRICS
+         =================================================================== -->
+    <section class="testimonials-section">
+      <div class="container">
+        <div class="section-header-centered">
+          <span class="section-tag">Client Success Stories</span>
+          <h2 class="section-title">Trusted by operators across 18 countries.</h2>
+          <p class="section-description">
+            Here is how high-growth businesses streamlined inventory, simplified accounting, and eliminated stock
+            discrepancy.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <p class="testimonial-quote">
+              "We migrated 6 retail branches and 12,000 SKUs from Excel to ExoStock over a single weekend. The instant
+              barcode scanning and GST invoice sync immediately saved our staff 3 hours every night."
+            </p>
+            <div class="testimonial-author-row">
+              <div class="author-avatar">RK</div>
+              <div class="author-info">
+                <h4>Rajesh K. Mehta</h4>
+                <p>Director of Operations, Vardhman Retail Hub</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <p class="testimonial-quote">
+              "ExoStock gives us the exact clarity an omnichannel business needs. When an order sells on our Shopify
+              storefront, warehouse stock updates immediately. Stockouts dropped to literally zero."
+            </p>
+            <div class="testimonial-author-row">
+              <div class="author-avatar">SL</div>
+              <div class="author-info">
+                <h4>Sarah Jenkins</h4>
+                <p>Supply Chain Lead, Lumina Home Global (UK)</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <p class="testimonial-quote">
+              "The automated WhatsApp invoice dispatch and predictive reorder warnings are game changers. Exotic
+              Infotech built a solution that looks and feels like software from Silicon Valley."
+            </p>
+            <div class="testimonial-author-row">
+              <div class="author-avatar">AM</div>
+              <div class="author-info">
+                <h4>Anand Mohan</h4>
+                <p>Founder & CEO, Apex Electrical Distributors</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         INTERACTIVE FAQ ACCORDION
+         =================================================================== -->
+    <section id="faq" class="faq-section">
+      <div class="container">
+        <div class="section-header-centered">
+          <span class="section-tag">Got Questions?</span>
+          <h2 class="section-title">Frequently asked questions.</h2>
+          <p class="section-description">
+            Everything you need to know about implementation, hardware compatibility, and data security.
+          </p>
+        </div>
+
+        <div class="faq-accordion-container">
+          <div class="faq-item active">
+            <button class="faq-question-btn" type="button">
+              <span>How long does it take to migrate from Excel or Tally into ExoStock?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+            <div class="faq-answer-content">
+              Most businesses migrate within 30 to 45 minutes using our 1-click CSV/Excel smart mapper. You can import
+              existing items, current stock quantities, supplier lists, customer ledgers, and barcode numbers
+              seamlessly. Our support team also offers complimentary concierge migration assistance.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" type="button">
+              <span>Does ExoStock work with my existing barcode scanners and thermal printers?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+            <div class="faq-answer-content">
+              Yes! ExoStock supports all USB, Bluetooth, and wireless 1D/2D barcode scanners, handheld Android RFID
+              terminals, and industry-standard thermal receipt printers (2-inch, 3-inch, Zebra, TVS, Epson) right out of
+              the box with zero drivers required.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" type="button">
+              <span>Is our company data encrypted and safely backed up?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+            <div class="faq-answer-content">
+              ExoStock operates on SOC2 Type II and ISO 27001 certified cloud infrastructure with AES-256 encryption at
+              rest and TLS 1.3 in transit. We maintain automated point-in-time database backups replicated across
+              multiple availability zones.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" type="button">
+              <span>Can we manage multiple branches and franchises from one centralized account?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+            <div class="faq-answer-content">
+              Yes. With Business and Enterprise tiers, you can configure individual warehouses, retail branches, and
+              franchise outlets under one master dashboard. Managers only see stock assigned to their location, while
+              executives view consolidated multi-location reports.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" type="button">
+              <span>Do you provide API access for custom internal applications?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+            <div class="faq-answer-content">
+              Yes, our Enterprise and Custom plans provide comprehensive OpenAPI 3.0 REST endpoints and real-time
+              webhook events for products, inventory levels, order dispatches, customers, and invoice receipts.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         CONTACT & IMMEDIATE ACTION CALL-TO-ACTION SECTION
+         =================================================================== -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-box">
+          <div>
+            <h2 class="cta-heading">Ready to revolutionize your inventory operations?</h2>
+            <p class="cta-subtext">
+              Join leading retail chains, wholesalers, and omnichannel enterprises. Test drive ExoStock with your real
+              SKU catalog in a personalized sandbox demo.
+            </p>
+            <div class="cta-contact-chips">
+              <div>
+                <span>Official Product by <strong>Exotic Infotech Pvt. Ltd.</strong></span>
+              </div>
+              <div>
+                Email: <a href="mailto:info@exoticinfotech.com">info@exoticinfotech.com</a>
+              </div>
+              <div>
+                Direct Sales: <a href="tel:+918733081108">+91 87330 81108</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Embedded Lead Form -->
+          <form id="ctaQuickForm" class="cta-form" aria-label="Quick Demo Registration">
+            <div class="form-group">
+              <label for="quickEmail" class="form-label">Corporate Work Email</label>
+              <input type="email" id="quickEmail" class="form-input" placeholder="name@company.com" required>
+            </div>
+            <div class="form-group">
+              <label for="quickPhone" class="form-label">Phone / WhatsApp Number</label>
+              <input type="tel" id="quickPhone" class="form-input" placeholder="+91 98765 43210" required>
+            </div>
+            <div class="form-group">
+              <label for="quickSkuCount" class="form-label">Estimated SKU / Product Count</label>
+              <select id="quickSkuCount" class="form-input">
+                <option value="500">Under 500 SKUs</option>
+                <option value="2000">500 – 2,000 SKUs</option>
+                <option value="10000">2,000 – 10,000 SKUs</option>
+                <option value="enterprise">10,000+ Enterprise SKUs</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-accent btn-lg" style="margin-top: 8px;">
+              Get Instant Sandbox Credentials
+            </button>
+            <span style="font-size: 11px; color: var(--text-muted); text-align: center;">No credit card required •
+              Instant 14-day full access</span>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================================================================
+       SCHEDULE DEMO MODAL DIALOG
+       =================================================================== -->
+  <div id="demoModalBackdrop" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-window">
+      <button id="closeModalBtn" class="modal-close-btn" aria-label="Close Modal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+
+      <div id="modalContentBody">
+        <div style="margin-bottom: 24px;">
+          <span class="plan-tier-badge"
+            style="background: var(--accent-brand-subtle); color: var(--accent-brand);">Concierge Onboarding</span>
+          <h3 id="modalTitle" style="font-size: 24px; font-weight: 800; margin-top: 8px; letter-spacing: -0.02em;">
+            Schedule Your 1-on-1 Walkthrough</h3>
+          <p style="font-size: 13px; color: var(--text-secondary); margin-top: 4px;">
+            A senior solutions architect from Exotic Infotech will present a customized demo tailored to your
+            operational industry.
+          </p>
+        </div>
+
+        <form id="demoBookingForm" style="display: flex; flex-direction: column; gap: 14px;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <div class="form-group">
+              <label class="form-label" style="color: var(--text-primary);" for="modalNameInput">Full Name</label>
+              <input type="text" id="modalNameInput" class="form-input"
+                style="color: var(--text-primary); border-color: var(--border-medium); background: var(--bg-surface);"
+                placeholder="Alex Reynolds" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" style="color: var(--text-primary);" for="modalCompanyInput">Company Name</label>
+              <input type="text" id="modalCompanyInput" class="form-input"
+                style="color: var(--text-primary); border-color: var(--border-medium); background: var(--bg-surface);"
+                placeholder="Apex Global Logistics" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" style="color: var(--text-primary);" for="modalEmailInput">Business Email</label>
+            <input type="email" id="modalEmailInput" class="form-input"
+              style="color: var(--text-primary); border-color: var(--border-medium); background: var(--bg-surface);"
+              placeholder="alex@apexlogistics.com" required>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <div class="form-group">
+              <label class="form-label" style="color: var(--text-primary);" for="modalDateInput">Preferred Date</label>
+              <input type="date" id="modalDateInput" class="form-input"
+                style="color: var(--text-primary); border-color: var(--border-medium); background: var(--bg-surface);"
+                required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" style="color: var(--text-primary);" for="modalTimeInput">Time Slot</label>
+              <select id="modalTimeInput" class="form-input"
+                style="color: var(--text-primary); border-color: var(--border-medium); background: var(--bg-surface);">
+                <option value="11:00 AM">11:00 AM IST</option>
+                <option value="02:30 PM">02:30 PM IST</option>
+                <option value="04:30 PM">04:30 PM IST</option>
+                <option value="08:00 PM">08:00 PM IST (US/EU)</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" style="margin-top: 10px; width: 100%;">
+            Confirm VIP Demonstration
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       EDITORIAL MINIMALIST FOOTER
+       =================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <div class="brand-logo-container">
+            <img src="assets/companylogo.png" alt="Exotic Infotech" class="exotic-brand-img">
+            <div class="brand-divider"></div>
+            <span class="brand-name" style="font-size: 18px;">ExoStock</span>
+          </div>
+          <p>
+            An enterprise cloud product engineered by <strong>Exotic Infotech Pvt. Ltd.</strong> Empowering global
+            businesses with real-time inventory precision, compliant billing, and multi-location warehouse
+            orchestration.
+          </p>
+          <div style="font-size: 12px; color: var(--text-muted);">
+            Surat, Gujarat, India • Serving Clients Worldwide
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Platform</div>
+          <ul class="footer-links-list">
+            <li><a href="#hero">Live Video Tour</a></li>
+            <li><a href="#simulator">Interactive Live Simulator</a></li>
+            <li><a href="#features">Stock Telemetry Engine</a></li>
+            <li><a href="#features">Automated GST Billing</a></li>
+            <li><a href="#integrations">Integration Ecosystem</a></li>
+            <li><a href="#roi-calculator">ROI & Savings Calculator</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Plans & Enterprise</div>
+          <ul class="footer-links-list">
+            <li><a href="#pricing">Free Starter Trial</a></li>
+            <li><a href="#pricing">Standard Multi-Staff</a></li>
+            <li><a href="#pricing">Business Multi-Warehouse</a></li>
+            <li><a href="#pricing">Enterprise & High Velocity</a></li>
+            <li><a href="#pricing">Custom White-Label</a></li>
+            <li><a href="https://exoticinfotech.com/Careers" target="_blank" rel="noopener">Careers at Exotic</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Contact & Help</div>
+          <ul class="footer-links-list">
+            <li><a href="mailto:info@exoticinfotech.com">info@exoticinfotech.com</a></li>
+            <li><a href="mailto:contact@exoticinfotech.com">contact@exoticinfotech.com</a></li>
+            <li><a href="tel:+918733081108">+91 87330 81108</a></li>
+            <li><a href="https://exoticinfotech.com" target="_blank" rel="noopener">Exotic Infotech Official</a></li>
+            <li><a href="#" class="open-demo-modal-btn">Request Support Ticket</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>
+          © 2026 Exotic Infotech Pvt. Ltd. All rights reserved. ExoStock is a trademark of Exotic Infotech.
+        </div>
+        <div class="system-status-indicator">
+          <span class="pulse-dot"></span>
+          <span>All Cloud Clusters Operational • 99.99% Availability</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
